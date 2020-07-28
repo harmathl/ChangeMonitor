@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Monitor";
+}
+
+<h2>Table changes</h2>
+<ul id="messages-list"></ul>
+
+@section Scripts {
+    <script src="~/js/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    <script type="text/javascript">
+
+        var messagesList = document.getElementById("messages-list");
+
+        function appendMessage(content) {
+            var jsonString = JSON.parse(content);
+            var li = document.createElement("li");
+            var div1 = document.createElement("div");
+            div1.className = "div1";
+            div1.innerText = jsonString.CreateDate + ' [' + jsonString.ChangeType + ']';
+            li.appendChild(div1);
+
+            var div2 = document.createElement("div");
+            div2.className = "div2";
+            div2.innerText = jsonString.Key + ' => ' + jsonString.Value;
+            li.appendChild(div2);
+
+            messagesList.appendChild(li);
+        }
+
+        var connection = new signalR.HubConnectionBuilder()
+            .withUrl("/notificationHub")
+            .build();
+
+        connection.on("Notify", function (message) {
+            appendMessage(message)
+        });
+
+        connection.start();
+
+    </script>
+}

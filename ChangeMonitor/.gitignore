@@ -1,0 +1,89 @@
+ 
+#
+# Windows and Mac OS X Temp Cache Files
+#
+[Tt]humbs.db
+*.DS_Store
+
+#
+# Visual Studio files
+#
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.sdf
+*.dbmdl
+*.suo
+*.jfm
+*.sqlite
+*.cache
+*.schemaview
+*.swc
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+[Ss]taging/
+[Bb]in-[Dd]ebug/
+[Bb]in-[Rr]elease/
+MolesAssemblies/
+
+#
+# Eclipse files
+#
+.metadata/
+
+#
+# Tooling
+#
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+
+#
+# Project files
+#
+[Bb]uild/
+
+#
+# Subversion files
+#
+.svn
+#
+# Microsoft Office Temp Files
+#
+~$*
+
+# End of File
+*.iml
+/*.vsext
+*.cache
+
+#
+# Node modules
+#
+node_modules
+
+# VS own meta settings folder
+/.vs/
+.vs/
+/Utils/PhpJsonImporter/.vs/
+/packages/
+/.history
+package-lock.json
