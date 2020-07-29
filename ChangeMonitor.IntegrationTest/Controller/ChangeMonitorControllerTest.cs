@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Moq;
 using SignalRNotify;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace ChangeMonitor.IntegrationTest.Controller {
